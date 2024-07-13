@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   View,
   Text,
@@ -8,12 +8,37 @@ import {
   Dimensions,
 } from 'react-native';
 import axios from 'axios';
-import {LineChart} from 'react-native-chart-kit';
+import { LineChart } from 'react-native-chart-kit';
 import Orientation from 'react-native-orientation-locker';
-import {GoogleSignin} from '@react-native-google-signin/google-signin';
+import { GoogleSignin } from '@react-native-google-signin/google-signin';
 import * as Keychain from 'react-native-keychain';
-import {useNavigation} from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
 import styles from '../styles';
+import { NativeModules } from 'react-native';
+
+const { WatchConnectivityModule } = NativeModules;
+
+const sendFitnessDataToWatch = (data) => {
+  const fitnessData = {
+    pullups: data.Exercises.Pullup?.Total ?? 0,
+    pushups: data.Exercises.Pushup?.Total ?? 0,
+    squats: data.Exercises.Squat?.Total ?? 0,
+    hspu: data.Exercises.HSPU?.Total ?? 0,
+  };
+
+  console.log('Sending fitness data to watch:', fitnessData);
+
+  if (
+    WatchConnectivityModule &&
+    WatchConnectivityModule.sendFitnessDataToWatch
+  ) {
+    WatchConnectivityModule.sendFitnessDataToWatch(fitnessData);
+  } else {
+    console.error(
+      'sendFitnessDataToWatch is not defined on WatchConnectivityModule',
+    );
+  }
+};
 
 const ProgressScreen = () => {
   const [data, setData] = useState(null);
@@ -31,6 +56,7 @@ const ProgressScreen = () => {
         );
         setData(response.data);
         setError(null);
+        sendFitnessDataToWatch(response.data);
       } catch (error) {
         console.error('Error fetching data:', error);
         setError('Error fetching data');
@@ -41,7 +67,7 @@ const ProgressScreen = () => {
 
     fetchData();
 
-    const handleOrientationChange = orientation => {
+    const handleOrientationChange = (orientation) => {
       setOrientation(orientation);
     };
 
@@ -159,7 +185,7 @@ const ProgressScreen = () => {
   }
 
   if (orientation === 'LANDSCAPE-LEFT' || orientation === 'LANDSCAPE-RIGHT') {
-    return <View style={{flex: 1, padding: 8}}>{renderGraph()}</View>;
+    return <View style={{ flex: 1, padding: 8 }}>{renderGraph()}</View>;
   }
 
   return (

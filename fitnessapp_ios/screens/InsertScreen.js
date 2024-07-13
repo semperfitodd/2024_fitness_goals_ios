@@ -1,18 +1,10 @@
-import React, {useEffect, useState} from 'react';
-import {
-  View,
-  Text,
-  TextInput,
-  Button,
-  Alert,
-  TouchableWithoutFeedback,
-  Keyboard,
-} from 'react-native';
+import React, { useEffect, useState } from 'react';
+import { View, Text, TextInput, Button, Alert, TouchableWithoutFeedback, Keyboard } from 'react-native';
 import axios from 'axios';
 import DateTimePicker from '@react-native-community/datetimepicker';
 import * as Keychain from 'react-native-keychain';
+import { useNavigation } from '@react-navigation/native';
 import styles from '../styles';
-import {useNavigation} from '@react-navigation/native';
 
 const API_ENDPOINT = 'https://fitness.bernsonfamily.net/insert';
 
@@ -32,14 +24,14 @@ const InsertScreen = () => {
     const checkIfSignedIn = async () => {
       const token = await Keychain.getGenericPassword();
       if (!token) {
-        navigation.replace('SignIn');
+        navigation.navigate('SignInScreen');
       }
     };
     checkIfSignedIn();
   }, [navigation]);
 
   const handleInputChange = (name, value) => {
-    setExerciseData({...exerciseData, [name]: value});
+    setExerciseData({ ...exerciseData, [name]: value });
   };
 
   const handleSubmit = async () => {
@@ -49,7 +41,7 @@ const InsertScreen = () => {
 
       if (response.status === 200) {
         Alert.alert('Success', 'Record successfully inserted!', [
-          {text: 'OK', onPress: () => navigation.navigate('Progress')},
+          { text: 'OK', onPress: () => navigation.navigate('Progress') },
         ]);
       } else {
         Alert.alert('Error', 'Failed to insert record.');
@@ -64,7 +56,7 @@ const InsertScreen = () => {
   const handleDateChange = (event, selectedDate) => {
     const currentDate = selectedDate || exerciseData.date;
     setShowDatePicker(false);
-    setExerciseData({...exerciseData, date: currentDate});
+    setExerciseData({ ...exerciseData, date: currentDate });
   };
 
   return (
@@ -74,6 +66,7 @@ const InsertScreen = () => {
         <TextInput
           style={styles.input}
           placeholder="Date"
+          placeholderTextColor="#999"
           value={exerciseData.date.toISOString().split('T')[0]}
           onFocus={() => setShowDatePicker(true)}
           showSoftInputOnFocus={false}
@@ -89,6 +82,7 @@ const InsertScreen = () => {
         <TextInput
           style={styles.input}
           placeholder="Pull-ups"
+          placeholderTextColor="#999"
           keyboardType="numeric"
           value={exerciseData.pullups}
           onChangeText={value => handleInputChange('pullups', value)}
@@ -96,6 +90,7 @@ const InsertScreen = () => {
         <TextInput
           style={styles.input}
           placeholder="Push-ups"
+          placeholderTextColor="#999"
           keyboardType="numeric"
           value={exerciseData.pushups}
           onChangeText={value => handleInputChange('pushups', value)}
@@ -103,6 +98,7 @@ const InsertScreen = () => {
         <TextInput
           style={styles.input}
           placeholder="Squats"
+          placeholderTextColor="#999"
           keyboardType="numeric"
           value={exerciseData.squats}
           onChangeText={value => handleInputChange('squats', value)}
@@ -110,6 +106,7 @@ const InsertScreen = () => {
         <TextInput
           style={styles.input}
           placeholder="HSPU"
+          placeholderTextColor="#999"
           keyboardType="numeric"
           value={exerciseData.hspu}
           onChangeText={value => handleInputChange('hspu', value)}

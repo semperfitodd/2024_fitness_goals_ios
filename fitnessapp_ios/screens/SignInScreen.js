@@ -9,7 +9,7 @@ const SignInScreen = ({ navigation }) => {
       await GoogleSignin.hasPlayServices();
       const userInfo = await GoogleSignin.signIn();
       await Keychain.setGenericPassword('userToken', userInfo.idToken);
-      navigation.replace('Insert');
+      navigation.navigate('Progress');
     } catch (error) {
       console.error('Error signing in', error);
     }

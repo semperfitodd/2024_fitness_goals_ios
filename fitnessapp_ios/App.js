@@ -37,7 +37,7 @@ function App() {
       <Stack.Navigator initialRouteName="Progress">
         <Stack.Screen name="Progress" component={ProgressScreen} />
         <Stack.Screen name="Insert" component={InsertScreen} />
-        {!user ? <Stack.Screen name="SignIn" component={SignInScreen} /> : null}
+        {!user ? <Stack.Screen name="SignInScreen" component={SignInScreen} /> : null}
       </Stack.Navigator>
     </NavigationContainer>
   );
