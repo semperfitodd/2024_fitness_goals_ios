@@ -13,6 +13,7 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		22490D489E53DAD222CE39E4 /* libPods-Fitness Tracker-Fitness TrackerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 49B6C418AA3755C919CFE728 /* libPods-Fitness Tracker-Fitness TrackerTests.a */; };
+		26166A73D641FADE54A83CAB /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 9A50ABB6B881BDC6AAD556C8 /* PrivacyInfo.xcprivacy */; };
 		5F234C882C38483B00E8FCE9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5F234C872C38483B00E8FCE9 /* GoogleService-Info.plist */; };
 		5F927A862C4171D90077B73D /* watchappApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F927A852C4171D90077B73D /* watchappApp.swift */; };
 		5F927A882C4171D90077B73D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F927A872C4171D90077B73D /* ContentView.swift */; };
@@ -21,7 +22,7 @@
 		5F927A972C4171DA0077B73D /* watchapp_Watch_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F927A962C4171DA0077B73D /* watchapp_Watch_AppTests.swift */; };
 		5F927AA12C4171DA0077B73D /* watchapp_Watch_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F927AA02C4171DA0077B73D /* watchapp_Watch_AppUITests.swift */; };
 		5F927AA32C4171DA0077B73D /* watchapp_Watch_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F927AA22C4171DA0077B73D /* watchapp_Watch_AppUITestsLaunchTests.swift */; };
-		5F927AA62C4171DA0077B73D /* watchapp Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 5F927A832C4171D90077B73D /* watchapp Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5F927AA62C4171DA0077B73D /* Fitness Tracker.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 5F927A832C4171D90077B73D /* Fitness Tracker.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		5F927AB32C4172440077B73D /* WatchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F927AB12C4172440077B73D /* WatchKit.framework */; };
 		5F927AB42C4172440077B73D /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F927AB22C4172440077B73D /* WatchConnectivity.framework */; };
 		5F927AB52C4172550077B73D /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F927AB22C4172440077B73D /* WatchConnectivity.framework */; };
@@ -72,7 +73,7 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				5F927AA62C4171DA0077B73D /* watchapp Watch App.app in Embed Watch Content */,
+				5F927AA62C4171DA0077B73D /* Fitness Tracker.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -97,7 +98,7 @@
 		5709B34CF0A7D63546082F79 /* Pods-fitnessapp_ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fitnessapp_ios.release.xcconfig"; path = "Target Support Files/Pods-fitnessapp_ios/Pods-fitnessapp_ios.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-fitnessapp_ios-fitnessapp_iosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fitnessapp_ios-fitnessapp_iosTests.debug.xcconfig"; path = "Target Support Files/Pods-fitnessapp_ios-fitnessapp_iosTests/Pods-fitnessapp_ios-fitnessapp_iosTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5F234C872C38483B00E8FCE9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		5F927A832C4171D90077B73D /* watchapp Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "watchapp Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F927A832C4171D90077B73D /* Fitness Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fitness Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F927A852C4171D90077B73D /* watchappApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = watchappApp.swift; sourceTree = "<group>"; };
 		5F927A872C4171D90077B73D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5F927A892C4171DA0077B73D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -117,6 +118,7 @@
 		6190A11DC4437F55384E2908 /* Pods-Fitness Tracker-Fitness TrackerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fitness Tracker-Fitness TrackerTests.debug.xcconfig"; path = "Target Support Files/Pods-Fitness Tracker-Fitness TrackerTests/Pods-Fitness Tracker-Fitness TrackerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = fitnessapp_ios/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-fitnessapp_ios-fitnessapp_iosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fitnessapp_ios-fitnessapp_iosTests.release.xcconfig"; path = "Target Support Files/Pods-fitnessapp_ios-fitnessapp_iosTests/Pods-fitnessapp_ios-fitnessapp_iosTests.release.xcconfig"; sourceTree = "<group>"; };
+		9A50ABB6B881BDC6AAD556C8 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = ../fitnessapp_ios/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		C31D7D406826215A3B564178 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = fitnessapp_ios/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		E680C5F1DCF7508E7596B77C /* Pods-Fitness Tracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fitness Tracker.debug.xcconfig"; path = "Target Support Files/Pods-Fitness Tracker/Pods-Fitness Tracker.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -226,6 +228,7 @@
 				5F927A8B2C4171DA0077B73D /* Preview Content */,
 				5F927ABB2C4182820077B73D /* ExtensionDelegate.swift */,
 				5F927ABD2C41848B0077B73D /* FitnessDataModel.swift */,
+				9A50ABB6B881BDC6AAD556C8 /* PrivacyInfo.xcprivacy */,
 			);
 			path = "watchapp Watch App";
 			sourceTree = "<group>";
@@ -285,7 +288,7 @@
 			children = (
 				13B07F961A680F5B00A75B9A /* Fitness Tracker.app */,
 				00E356EE1AD99517003FC87E /* Fitness TrackerTests.xctest */,
-				5F927A832C4171D90077B73D /* watchapp Watch App.app */,
+				5F927A832C4171D90077B73D /* Fitness Tracker.app */,
 				5F927A922C4171DA0077B73D /* watchapp Watch AppTests.xctest */,
 				5F927A9C2C4171DA0077B73D /* watchapp Watch AppUITests.xctest */,
 			);
@@ -368,7 +371,7 @@
 			);
 			name = "watchapp Watch App";
 			productName = "watchapp Watch App";
-			productReference = 5F927A832C4171D90077B73D /* watchapp Watch App.app */;
+			productReference = 5F927A832C4171D90077B73D /* Fitness Tracker.app */;
 			productType = "com.apple.product-type.application";
 		};
 		5F927A912C4171DA0077B73D /* watchapp Watch AppTests */ = {
@@ -483,6 +486,7 @@
 			files = (
 				5F927A8D2C4171DA0077B73D /* Preview Assets.xcassets in Resources */,
 				5F927A8A2C4171DA0077B73D /* Assets.xcassets in Resources */,
+				26166A73D641FADE54A83CAB /* PrivacyInfo.xcprivacy in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -775,7 +779,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -783,7 +787,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.bernsonfamily.fitnessapp;
 				PRODUCT_NAME = "Fitness Tracker";
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -810,7 +814,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -818,7 +822,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.bernsonfamily.fitnessapp;
 				PRODUCT_NAME = "Fitness Tracker";
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 5.0;
@@ -849,7 +853,6 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = watchapp;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.bernsonfamily.fitnessapp;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -861,7 +864,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bernsonfamily.fitnessapp.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Fitness Tracker";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
@@ -896,7 +899,6 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = watchapp;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.bernsonfamily.fitnessapp;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -907,7 +909,7 @@
 				MARKETING_VERSION = 1.0;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bernsonfamily.fitnessapp.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Fitness Tracker";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -1131,7 +1133,10 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = "$(inherited)  ";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					" ",
+				);
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				USE_HERMES = true;
@@ -1203,7 +1208,10 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = "$(inherited)  ";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					" ",
+				);
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				USE_HERMES = true;
