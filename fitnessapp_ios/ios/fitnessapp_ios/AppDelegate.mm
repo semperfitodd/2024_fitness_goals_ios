@@ -1,7 +1,6 @@
 #import "AppDelegate.h"
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTBridgeModule.h>
-#import "WatchConnectivityModule.h"
 
 @implementation AppDelegate
 
