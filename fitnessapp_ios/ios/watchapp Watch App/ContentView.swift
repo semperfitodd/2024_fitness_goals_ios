@@ -1,55 +1,51 @@
 import SwiftUI
 
 struct ContentView: View {
-    @EnvironmentObject var fitnessDataModel: FitnessDataModel
+    @ObservedObject var networkManager = NetworkManager()
 
     var body: some View {
         ZStack {
-            Color(UIColor.lightGray).opacity(0.4).edgesIgnoringSafeArea(.all) // Set the background color
+            Color(.lightGray)
+                .edgesIgnoringSafeArea(.all)
 
-            VStack(alignment: .leading) {
+            VStack {
                 HStack {
                     Image("pullups")
                         .resizable()
-                        .frame(width: 24, height: 24) // Adjust the size as needed
-                    Text("\(fitnessDataModel.fitnessData.pullups)")
-                        .foregroundColor(.black)
+                        .frame(width: 24, height: 24)
+                    Text("\(networkManager.fitnessData.pullups)")
+                        .foregroundColor(.red)
                 }
-                .padding(.bottom, 2)
-
+                .padding()
                 HStack {
                     Image("pushups")
                         .resizable()
-                        .frame(width: 24, height: 24) // Adjust the size as needed
-                    Text("\(fitnessDataModel.fitnessData.pushups)")
-                        .foregroundColor(.black)
+                        .frame(width: 24, height: 24)
+                    Text("\(networkManager.fitnessData.pushups)")
+                        .foregroundColor(.red)
                 }
-                .padding(.bottom, 2)
-
+                .padding()
                 HStack {
                     Image("squats")
                         .resizable()
-                        .frame(width: 24, height: 24) // Adjust the size as needed
-                    Text("\(fitnessDataModel.fitnessData.squats)")
-                        .foregroundColor(.black)
+                        .frame(width: 24, height: 24)
+                    Text("\(networkManager.fitnessData.squats)")
+                        .foregroundColor(.red)
                 }
-                .padding(.bottom, 2)
-
+                .padding()
                 HStack {
                     Image("hspu")
                         .resizable()
-                        .frame(width: 24, height: 24) // Adjust the size as needed
-                    Text("\(fitnessDataModel.fitnessData.hspu)")
-                        .foregroundColor(.black)
+                        .frame(width: 24, height: 24)
+                    Text("\(networkManager.fitnessData.hspu)")
+                        .foregroundColor(.red)
                 }
-                .padding(.bottom, 2)
+                .padding()
             }
-            .padding()
+        }
+        .onAppear {
+            networkManager.fetchData()
+            print("ContentView appeared, fetching data...")
         }
     }
-}
-
-#Preview {
-    ContentView()
-        .environmentObject(FitnessDataModel())
 }
